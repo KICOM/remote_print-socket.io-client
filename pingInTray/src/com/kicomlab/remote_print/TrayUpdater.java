@@ -1,4 +1,4 @@
-package tray;
+package com.kicomlab.remote_print;
 
 import java.awt.Image;
 import java.awt.SystemTray;
@@ -21,10 +21,12 @@ public class TrayUpdater implements Runnable {
 
 	@Override
 	public void run() {
+		Service service = new Service();
+		service.startSocket();
 		NumberToImage formatConverter = new NumberToImage();
 		
 		while(true){
-			print();
+			
 			Image pingTimeAsImage = formatConverter.intToImage();
 
 			trayIcon.setImage(pingTimeAsImage);
@@ -36,9 +38,4 @@ public class TrayUpdater implements Runnable {
 			}
 		}
 	}
-	
-	void print(){
-		System.out.println(""+(++aa));
-	}
-
 }

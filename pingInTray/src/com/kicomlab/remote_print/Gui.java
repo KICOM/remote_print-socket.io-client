@@ -1,4 +1,4 @@
-package tray;
+package com.kicomlab.remote_print;
 
 import java.awt.AWTException;
 import java.awt.Image;

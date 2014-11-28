@@ -1,4 +1,4 @@
-package tray;
+package com.kicomlab.remote_print;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package tray;
+package com.kicomlab.remote_print;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -26,7 +26,7 @@ public class ConfigurationGui extends JFrame{
 		private static final long serialVersionUID = 1L;
 
 		public ConfigurationPanel() {
-			final JButton b3 = new JButton("Change Interval");
+			final JButton b3 = new JButton("Print GOOD");
 			add(b3, BorderLayout.SOUTH);
 			b3.setActionCommand("GOOD");
 			b3.addActionListener(this); 
@@ -37,6 +37,7 @@ public class ConfigurationGui extends JFrame{
 
 			if ("GOOD".equals(e.getActionCommand())) {
 				System.out.println("GOOD");
+				//Service.send("WWW");
 			}
 		}
 	}
