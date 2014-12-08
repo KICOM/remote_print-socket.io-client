@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="remote_print-socket.io-client:jar">
+    <output-path>$PROJECT_DIR$/..</output-path>
+    <root id="archive" name="remote_print-socket.io-client.jar">
+      <element id="module-output" name="remote_print-socket.io-client" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/socketio.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

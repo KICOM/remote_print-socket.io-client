@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Remote_print">
+    <output-path>$PROJECT_DIR$/..</output-path>
+    <root id="archive" name="Remote_print.jar">
+      <element id="module-output" name="remote_print-socket.io-client" />
+      <element id="library" level="module" name="socketio.jar" module-name="remote_print-socket.io-client" />
+    </root>
+  </artifact>
+</component>

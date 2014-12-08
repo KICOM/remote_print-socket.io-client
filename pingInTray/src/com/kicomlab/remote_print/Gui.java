@@ -9,6 +9,9 @@ import java.awt.TrayIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.print.DocFlavor;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
 import javax.swing.ImageIcon;
 
 public class Gui implements ActionListener{
@@ -79,7 +82,17 @@ public class Gui implements ActionListener{
 		
 	}
 
-	public void startUpdater(){ 	
+	public void startUpdater(){
+
+		PrintService pss[] = PrintServiceLookup.lookupPrintServices(DocFlavor.INPUT_STREAM.GIF, null);
+		if (pss.length == 0)
+			throw new RuntimeException("No printer services available.");
+		Settings.printer = pss[0];
+		for(PrintService p : pss){
+			System.out.println(p.getName());
+			Settings.printer_list.addElement(p);
+		}
+
 		Thread updater = new Thread(new TrayUpdater(trayIcon,tray));
 		updater.start();   
 	}

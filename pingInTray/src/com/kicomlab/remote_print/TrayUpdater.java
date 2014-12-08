@@ -22,12 +22,13 @@ public class TrayUpdater implements Runnable {
 	@Override
 	public void run() {
 		Service service = new Service();
-		service.startSocket();
 		NumberToImage formatConverter = new NumberToImage();
 		
 		while(true){
-			
-			Image pingTimeAsImage = formatConverter.intToImage();
+			String icon = "";
+			if(Settings.printer == null) icon = "K";
+			else icon = Settings.printer.getName().substring(0,1);
+			Image pingTimeAsImage = formatConverter.intToImage(icon);
 
 			trayIcon.setImage(pingTimeAsImage);
 

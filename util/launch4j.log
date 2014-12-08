@@ -1,0 +1,12 @@
+
+
+Version:	3.5
+CmdLine:	D:\JAVA\remote_print.exe --l4j-debug
+WOW64:		yes
+Working dir:	D:\JAVA\.
+Bundled JRE:	C:\Program Files (x86)\Java\jre7
+Check launcher:	C:\Program Files (x86)\Java\jre7\bin\javaw.exe (OK)
+Launcher:	C:\Program Files (x86)\Java\jre7\bin\javaw.exe
+Launcher args:	-jar "D:\JAVA\remote_print.exe"
+Args length:	31/32768 chars
+Exit code:	0

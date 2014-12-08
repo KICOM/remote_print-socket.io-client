@@ -7,12 +7,12 @@ import javax.swing.JLabel;
 
 public class NumberToImage {
 
-	public Image intToImage() {
+	public Image intToImage(String str_icon) {
 		
-		String stringOfPingValue = "AB"; 
+		String stringOfPingValue = str_icon;
 	    JLabel text = new JLabel(stringOfPingValue);
 	    text.setSize(26,20);
-	    text.setFont(new Font("MONOSPACED", Font.BOLD,18)); 
+	    text.setFont(new Font("MONOSPACED", Font.BOLD,25));
 	    text.setBackground(Color.RED);
 	    BufferedImage image = getImage(text);
 	    return  image;
