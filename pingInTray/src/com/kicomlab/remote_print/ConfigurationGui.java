@@ -20,7 +20,7 @@ public class ConfigurationGui extends JFrame{
 	public ConfigurationGui(){
 
 		setTitle("Configure Remote Printer");
-		setSize(350, 200);
+		setSize(350, 240);
 
 		ConfigurationPanel panel = new ConfigurationPanel();
 		add(panel, BorderLayout.CENTER);
@@ -40,19 +40,19 @@ public class ConfigurationGui extends JFrame{
 			list.addListSelectionListener((ListSelectionListener) this);
 			add(BorderLayout.CENTER, jsp);
 
-//			final JButton b3 = new JButton("Print GOOD");
-//			add(b3, BorderLayout.SOUTH);
-//			b3.setActionCommand("GOOD");
-//			b3.addActionListener(this);
+			JButton btnShow = new JButton("신청서 보기");
+			add(btnShow, BorderLayout.SOUTH);
+			btnShow.setActionCommand("btnShow");
+			btnShow.addActionListener(this);
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-
-//			if ("GOOD".equals(e.getActionCommand())) {
-//				System.out.println("GOOD");
-//				//Service.send("WWW");
-//			}
+			if ("btnShow".equals(e.getActionCommand())) {
+				System.out.println("btnShow");
+				DocFrame df = new DocFrame();
+				df.setVisible(true);
+			}
 		}
 
 		boolean flag = true;
